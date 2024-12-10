@@ -6,16 +6,15 @@ const sortSelectEl = document.getElementById("sort-select");
 
 const itemsContainerEl = document.getElementById("items-container");
 
-let compare;
-compare =
-  sortSelectEl.value === "ascending"
-    ? (compare = (a, b) => a.price - b.price)
-    : (compare = (a, b) => b.price - a.price);
-
-
-let allProducts = [];
 
 async function displayProducts() {
+  let compare;
+compare =
+  sortSelectEl.value === "ascending"
+    ? compare = (a, b) => a.price - b.price
+    : compare = (a, b) => b.price - a.price;
+
+
   const products = await getProducts();
   const productsList = products
     .sort(compare)
@@ -37,32 +36,9 @@ async function displayProducts() {
     )
     .join("");
   itemsContainerEl.innerHTML = productsList;
-  console.log(compare);
+
 }
 
-function filterByCategory(category) {
-  const filteredProducts = allProducts.filter(
-    (product) => product.category === category
-  );
-  displayProducts(filteredProducts);
-}
-
-function testFunc(category) {
-  if (category === "all") {
-    getProducts();
-  } else filterByCategory(category);
-}
-
-function sortFunc(sortOption) {
-  let sortedProducts = [...allProducts];
-
-  if (sortOption === "ascending") {
-    sortedProducts.sort((a, b) => a.price - b.price);
-  } else if (sortOption === "descending") {
-    sortedProducts.sort((a, b) => b.price - a.price);
-  }
-  displayProducts(sortedProducts);
-}
 displayProducts();
 
 filterSelectEl.addEventListener("change", displayProducts);
