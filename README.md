@@ -60,14 +60,14 @@ Discover the Team8 Webshop. It's an user-friendly e-commerce platform offering a
 - Responsive design: Webshop works well on all devices, from mobile to desktop.
 - Semantic HTML: Helps engines to understand the content
 - Efficient cart system: Dynamic cart updates with local storage support.
-<!-- Add more -->
+
 
 
 ## Disadvantages
 - Limited product categories.
 - Limited sort and filter options.
 - No search bar for filtration.
-<!-- Add more -->
+- No payment system implemented.
 
 ## Future improvments
 - Add more products and categories.
