@@ -104,7 +104,7 @@ Google Analytics is a powerful tool that supports business development by provid
 ### t8_add_to_cart:
 This tag is used to track when users add items to their shopping cart. It gives us a better understanding of what products are catching people’s attention and helps us learn more about their shopping habits.
 
-### t8_modal_Open
+### t8_open_modal
 This tag is designed to track user interest in different products and their detailed descriptions on our website. It helps us understand which products capture the most attention and how users engage with additional product information.
 
 ### t8_delete_from_cart
